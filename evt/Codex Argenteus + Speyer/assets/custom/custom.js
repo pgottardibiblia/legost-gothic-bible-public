@@ -1,3 +1,10 @@
+/*
+ * AI-assistance disclosure
+ * This file was developed with the assistance of Claude (Anthropic),
+ * a large language model. The code was reviewed, tested and adapted by the
+ * author, who takes full responsibility for its content.
+ */
+
 console.log('Custom EVT script loaded');
 
 // Funzione per aggiornare la classe del body in base alla modalità attiva

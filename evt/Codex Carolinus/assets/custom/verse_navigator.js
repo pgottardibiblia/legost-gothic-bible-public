@@ -1,8 +1,15 @@
+/*
+ * AI-assistance disclosure
+ * This file was developed with the assistance of Claude (Anthropic),
+ * a large language model. The code was reviewed, tested and adapted by the
+ * author, who takes full responsibility for its content.
+ */
+
 (function () {
   'use strict';
 
   // ── Configuration ──────────────────────────────────────────────────
-  const TEI_XML_PATH = 'assets/data/text/CCar_Rm_TEI.xml'; // <-- CHANGE IF NEEDED
+  const TEI_XML_PATH = 'assets/data/text/CArg_TEI.xml'; // <-- CHANGE IF NEEDED
   const TEI_NS = 'http://www.tei-c.org/ns/1.0';
   const XI_NS  = 'http://www.w3.org/2001/XInclude';
   const XML_NS = 'http://www.w3.org/XML/1998/namespace';

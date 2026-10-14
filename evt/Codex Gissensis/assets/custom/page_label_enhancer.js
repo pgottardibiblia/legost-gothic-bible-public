@@ -11,7 +11,13 @@
  *
  * Iniezione: <script src="evt3_page_label_enhancer.js"></script>
  * in fondo al <body> di index.html, dopo <app-root>.
+ * 
+ * AI-assistance disclosure
+ * This file was developed with the assistance of Claude (Anthropic),
+ * a large language model. The code was reviewed, tested and adapted by the
+ * author, who takes full responsibility for its content.
  */
+
 (function () {
   'use strict';
 

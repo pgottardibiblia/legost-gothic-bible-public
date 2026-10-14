@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# ---------------------------------------------------------------------------
+# AI-assistance disclosure
+# This script was developed with the assistance of Claude (Anthropic),
+# a large language model. The code was reviewed, tested and adapted by the
+# author, who takes full responsibility for its content.
+# ---------------------------------------------------------------------------
+
 """
 Created on Thu Jul  4 08:36:20 2024
 
