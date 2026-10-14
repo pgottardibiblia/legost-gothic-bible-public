@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use these editions, please cite the specific release you have used, as below."
+type: dataset
+title: "The Gothic Bible: LegOst Digital Editions"
+version: "1.0"
+date-released: 2026-10-14
+abstract: >-
+  TEI-encoded diplomatic-interpretative digital editions of the witnesses to
+  the Gothic Bible, produced within the PRIN 2022 project LegOst (The Textual
+  Legacy of the Ostrogoths in Italy: The Gothic Bible and Other Texts) and
+  published on Archivum Gothicum. Volume 1 comprises the Codex Argenteus with
+  the Speyer fragment, the Codex Carolinus, the Codex Gissensis, and the
+  Ambrosiani C and D. The repository also contains the encoding documentation,
+  the Word-to-TEI conversion scripts and the customisations made to EVT 3.
+authors:
+  - family-names: Falluomini
+    given-names: Carla
+    affiliation: "Università degli Studi di Perugia"
+    orcid: "https://orcid.org/0000-0002-1055-5873"
+  - family-names: Gottardi
+    given-names: Pierandrea
+    affiliation: "Università degli Studi di Parma"
+    orcid: "https://orcid.org/0000-0003-3716-8328"
+license: CC-BY-4.0
+url: "https://archivumgothicum.eu"
+repository-code: "https://github.com/pgottardibiblia/legost-gothic-bible-public"
+keywords:
+  - Gothic
+  - Gothic Bible
+  - Vulfila
+  - Codex Argenteus
+  - Codex Carolinus
+  - Codex Gissensis
+  - Codices Ambrosiani
+  - Ostrogoths
+  - manuscripts
+  - palimpsests
+  - digital scholarly edition
+  - TEI XML
+  - EVT
+references:
+  - type: book
+    title: "Archivum Gothicum: edizione delle fonti in lingua gotica"
+    authors:
+      - family-names: Falluomini
+        given-names: Carla
+      - family-names: Gottardi
+        given-names: Pierandrea
+    publisher:
+      name: "Edizioni Ca' Foscari"
+      city: Venice
+    year: 2026
+    isbn: "9791257420314"
+    doi: "10.30687/979-12-5742-031-4"
