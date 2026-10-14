@@ -1,0 +1,714 @@
+.ab[rend="align-center"] {
+    display: block;
+    text-align: center;
+}
+
+*[rend="strikethrough"] {
+    text-decoration: line-through;
+}
+
+*[rend="overwritten"] {
+    font-weight: bold;
+}
+
+*[rend="underline"] {
+    text-decoration: underline;
+}
+
+*[rend="italic"] {
+    font-style: italic;
+}
+
+*[rend="erasure"] {
+    background-color: rgb(70, 70, 70);
+}
+
+*[rend="cross"] {
+    text-decoration: line-through;
+}
+
+*[rend="gold_ink"] {
+    color: rgb(184, 134, 11);
+    font-weight: bold;
+}
+
+*[rend="line_full_width"] {
+    margin-bottom: 0.1rem;
+    border-bottom: 1px solid black;
+    display: block;
+}
+
+*[rend="sup"] {
+    vertical-align: text-bottom;
+}
+
+*[place="superscript"] {
+    vertical-align: text-bottom;
+}
+
+.metamark[rend="line"] {
+    display: block;
+    border: 1px solid black;
+    margin-top:-1em;
+    margin-right:70%;
+}
+
+.fw {
+    display: block;
+}
+
+[type="pageNum"][place="top_right"] {
+    float:right;
+    margin-top: -1.5rem;
+}
+
+evt-reading evt-note,
+evt-addition evt-note {
+  display: none;
+}
+
+body.diplomatic-mode evt-word[rend="silver_ink"] *[class="unclear ng-star-inserted"] {
+    color: rgb(120, 120, 120);
+}
+
+body.diplomatic-mode evt-word[rend="gold_ink"] *[class="unclear ng-star-inserted"] {
+    color: rgb(184, 164, 11);
+}
+
+body.interpretative-mode evt-word *[class="unclear ng-star-inserted"] {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+    padding-bottom: 1px;
+}
+
+.ex {
+    font-style: normal;
+}
+
+body.interpretative-mode evt-content-viewer *[class="gap ng-star-inserted"] {
+    display: none !important;
+}
+
+body.interpretative-mode evt-generic-element *[class="num ng-star-inserted"] span {
+    display: none !important;
+}
+
+body.interpretative-mode evt-generic-element *[class="num ng-star-inserted"] evt-content-viewer:first-of-type::before {
+    content: attr(data-value);
+}
+
+@media (min-width: 1325px) {
+  .panel-content div:has(evt-page) {
+    margin: 0 6rem;
+  }
+
+  *[place="margin_left"] {
+    float: left;
+    margin-left: -50px;
+    
+    max-width: 175px;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+
+  evt-addition[place="margin_right"] *[data-edition="diplomatic"] {
+    float: right;
+    margin-right: 20px;
+
+    max-width: 125px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  evt-note {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  /* Spazio tra elementi w nel margine sinistro */
+  *[place="margin_left"] evt-generic-element.w {
+    margin-right: 0.3em;
+  }
+
+  evt-addition[place="margin_right"] *[data-edition="diplomatic"] {
+    float: right;
+    margin-right: 20px;
+
+    max-width: 125px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Spazio tra elementi w nel margine destro */
+  evt-addition[place="margin_right"] evt-generic-element.w {
+    margin-right: 0.3em;
+  }
+
+  evt-note {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+evt-addition > span.add > evt-content-viewer + evt-content-viewer {
+  margin-left: 0.3em;
+}
+
+evt-addition > span.add[data-place="margin_left"] > evt-content-viewer {
+  display: block;
+  margin-left: -3.5em;
+}
+
+body.diplomatic-mode evt-content-viewer.seg:has([data-type="corresp-text"]) {
+    display: none !important;
+}
+
+body.interpretative-mode *[data-id*="seg_2"] {
+    display: none !important;
+}
+
+body.interpretative-mode evt-content-viewer[class="genericElement seg ng-star-inserted seg-primary seg-hidden"]::after {
+    content: "-";
+}
+
+body.interpretative-mode evt-content-viewer[data-corresp-text="..."]:not(:has(evt-generic-element[type="corresp-text"])):not(:has([data-type="corresp-text"]))::after {
+    content: " | ";
+}
+
+
+body.interpretative-mode evt-generic-element[type="chapter"]::before {
+    content: attr(n);
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #dc3545;
+    margin-right: 0.5em;
+    display: inline-block;
+}
+
+body.interpretative-mode evt-generic-element[type="chapter"]:has(*[type="header"])::before {
+    content: none !important;
+}
+
+body.interpretative-mode evt-generic-element[type="verse"]::before {
+    content: attr(n);
+    vertical-align: super;
+    font-size: 0.7em;
+    color: #999;
+    margin-right: 0.3em;
+}
+
+body.interpretative-mode evt-generic-element[type="verse"]:has(*[type="header"])::before {
+    content: none !important;
+}
+
+
+/* Eusebian Canons Tables */
+evt-generic-element[type="eusebian_canons"] {
+  margin: 0.5rem 0;
+  padding: 2rem;
+  background-color: #faf8f3;
+  border: 2px solid #8b7355;
+  border-radius: 4px;
+  display: block;
+}
+
+evt-generic-element[type="eusebian_canons"] > evt-content-viewer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+evt-generic-element[type="eusebian_canons"] > evt-content-viewer:empty,
+evt-generic-element[type="eusebian_canons"] > evt-content-viewer:not(:has(evt-generic-element)) {
+  display: none;
+}
+
+evt-generic-element.row {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: auto;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+evt-generic-element.row:last-of-type {
+  margin-bottom: 0;
+}
+
+evt-generic-element.row[n="1"] {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #8b7355;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+evt-generic-element.row > evt-content-viewer {
+  text-align: center;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+evt-generic-element.row > evt-content-viewer:empty,
+evt-generic-element.row > evt-content-viewer:not(:has(evt-word)):not(:has(evt-generic-element)) {
+  display: none;
+}
+
+evt-generic-element.row:empty {
+  display: none;
+}
+
+@media print {
+  evt-generic-element[type="eusebian_canons"] {
+    page-break-inside: avoid;
+    background-color: white;
+    border-color: black;
+  }
+}
+
+/**
+ * EVT3 Image Folder Selector – External Styles
+ * ===============================================
+ */
+
+/* ── Select element ───────────────────────────────────────────────── */
+#image-folder-selector {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  font-size: 0.815rem;
+  font-family: inherit;
+  height: 31px;
+  padding: 5px 2rem 5px 10px;
+  background-color: #f5ead4;
+  color: #50433b;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: auto;
+  line-height: 1.2;
+  cursor: pointer;
+
+  /* Hide native arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow + vertical separator */
+  background-image:
+    linear-gradient(to right, transparent calc(100% - 25px), #d3cabf calc(100% - 25px)),
+    url('data:image/svg+xml;utf8,<svg fill="%23666" height="10" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, right 0.5rem center;
+  background-size: auto, 12px 10px;
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#image-folder-selector:hover {
+  border-color: #b3b3b3;
+}
+
+#image-folder-selector:focus,
+#image-folder-selector:focus-visible {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(58, 47, 1, 0.25);
+}
+
+/* ── Option styling (limited browser support, but helps where it works) ── */
+#image-folder-selector option {
+  background-color: #f5ead4;
+  color: #362d28;
+  padding: 4px 8px;
+}
+
+/* ── Dark theme ───────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  #image-folder-selector {
+    background-color: #2d2d2d;
+    border-color: #555;
+    color: #ddd;
+    background-image:
+      linear-gradient(to right, transparent calc(100% - 25px), #555 calc(100% - 25px)),
+      url('data:image/svg+xml;utf8,<svg fill="%23999" height="10" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  }
+
+  #image-folder-selector:hover {
+    border-color: #777;
+  }
+
+  #image-folder-selector:focus,
+  #image-folder-selector:focus-visible {
+    border-color: #6cb4ff;
+    box-shadow: 0 0 0 2px rgba(108, 180, 255, 0.25);
+  }
+
+  #image-folder-selector option {
+    background-color: #2d2d2d;
+    color: #ddd;
+  }
+}
+
+
+/**
+ * EVT3 Verse Navigator – Styles
+ * ====================================
+ * Hierarchical UI: book tabs → collapsible chapters → verse options.
+ * Matches EVT3's ng-select visual language.
+ */
+
+/* ── Wrapper ──────────────────────────────────────────────────────── */
+.evt-verse-nav {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: inherit;
+  font-size: 0.815rem;
+}
+
+/* ── Trigger ──────────────────────────────────────────────────────── */
+.verse-nav-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  min-height: 30px;
+  min-width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f5ead4;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.verse-nav-trigger:hover {
+  border-color: #b3b3b3;
+}
+
+.verse-nav-trigger:focus,
+.verse-nav-trigger:focus-visible {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(58, 47, 1, 0.25);
+}
+
+.verse-nav-trigger.has-value .verse-nav-label {
+  color: #333;
+  font-weight: 500;
+}
+
+.verse-nav-icon {
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.verse-nav-label {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.verse-nav-arrow {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  flex-shrink: 0;
+}
+
+.verse-nav-arrow .ng-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #999;
+}
+
+.verse-nav-trigger[aria-expanded='true'] .verse-nav-arrow .ng-arrow {
+  border-top: none;
+  border-bottom: 5px solid #999;
+}
+
+/* ── Panel ────────────────────────────────────────────────────────── */
+.verse-nav-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 10000;
+  width: 260px;
+  max-height: 420px;
+  background: #f5ead4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.verse-nav-panel.open {
+  display: flex;
+}
+
+/* ── Search ───────────────────────────────────────────────────────── */
+.verse-nav-search {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e6e6e6;
+  flex-shrink: 0;
+}
+
+.verse-nav-search input {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.verse-nav-search input:focus {
+  border-color: #333;
+}
+
+.verse-nav-search input::placeholder {
+  color: #aaa;
+}
+
+/* ── Book Tabs ────────────────────────────────────────────────────── */
+.verse-nav-tabs {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  flex-shrink: 0;
+  background: #f5ead4;
+}
+
+.verse-nav-tab {
+  flex: 1;
+  padding: 5px 4px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  font-family: inherit;
+}
+
+.verse-nav-tab:hover {
+  color: #555;
+}
+
+.verse-nav-tab.active {
+  color: #555;
+  border-bottom-color: #333;
+}
+
+/* ── Content area ─────────────────────────────────────────────────── */
+.verse-nav-content {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Book panes */
+.verse-nav-book-pane {
+  display: none;
+}
+
+.verse-nav-book-pane.active {
+  display: block;
+}
+
+/* ── Chapter headers (collapsible) ────────────────────────────────── */
+.verse-nav-chapter-header {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+  background: #f5ead4;
+  border-bottom: 1px solid #eee;
+  transition: background 0.1s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.verse-nav-chapter-header:hover {
+  background: #f5ead4;
+}
+
+.ch-toggle {
+  font-size: 0.625rem;
+  color: #aaa;
+  width: 12px;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Chapter content (collapsible) */
+.verse-nav-chapter-content {
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.verse-nav-chapter-content.collapsed {
+  display: none;
+}
+
+/* ── Verse options ────────────────────────────────────────────────── */
+.verse-nav-option {
+  padding: 5px 16px 5px 26px;
+  font-size: 0.8125rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.verse-nav-option:hover {
+  background: #f0f6ff;
+  color: #333;
+}
+
+.verse-nav-option:active {
+  background: #dbeafe;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────── */
+.verse-nav-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.verse-nav-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.verse-nav-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.verse-nav-content::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* ── Dark theme ───────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .verse-nav-trigger {
+    background: #2d2d2d;
+    border-color: #555;
+    color: #ddd;
+  }
+
+  .verse-nav-trigger:hover { border-color: #777; }
+  .verse-nav-trigger.has-value .verse-nav-label { color: #eee; }
+  .verse-nav-label { color: #888; }
+
+  .verse-nav-panel {
+    background: #2d2d2d;
+    border-color: #555;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .verse-nav-search { border-bottom-color: #444; }
+  .verse-nav-search input {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #ddd;
+  }
+
+  .verse-nav-tabs { background: #333; border-bottom-color: #444; }
+  .verse-nav-tab { color: #999; }
+  .verse-nav-tab:hover { color: #ccc; }
+  .verse-nav-tab.active { color: #6cb4ff; border-bottom-color: #6cb4ff; }
+
+  .verse-nav-chapter-header {
+    background: #353535;
+    border-bottom-color: #444;
+    color: #ccc;
+  }
+  .verse-nav-chapter-header:hover { background: #3a3a3a; }
+
+  .verse-nav-option { color: #ddd; }
+  .verse-nav-option:hover { background: #3a3a3a; color: #6cb4ff; }
+}
+
+/* ── PDF Export Button ──────────────────────────────────── */
+#evt3-pdf-export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 31px;
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: 0.815rem;
+  font-weight: 500;
+  color: #50433b;
+  background-color: #f5ead4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+#evt3-pdf-export-btn:hover {
+  border-color: #b3b3b3;
+  background-color: #f0e4c8;
+}
+
+#evt3-pdf-export-btn:focus,
+#evt3-pdf-export-btn:focus-visible {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(58, 47, 1, 0.25);
+}
+
+#evt3-pdf-export-btn:active {
+  background-color: #e8dabc;
+}
+
+#evt3-pdf-export-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#evt3-pdf-export-btn svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* ── Dark theme ── */
+@media (prefers-color-scheme: dark) {
+  #evt3-pdf-export-btn {
+    background-color: #2d2d2d;
+    border-color: #555;
+    color: #ddd;
+  }
+
+  #evt3-pdf-export-btn:hover {
+    border-color: #777;
+    background-color: #3a3a3a;
+  }
+
+  #evt3-pdf-export-btn:focus,
+  #evt3-pdf-export-btn:focus-visible {
+    border-color: #6cb4ff;
+    box-shadow: 0 0 0 2px rgba(108, 180, 255, 0.25);
+  }
+}
