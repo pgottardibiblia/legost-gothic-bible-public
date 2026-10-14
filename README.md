@@ -133,12 +133,6 @@ Each function of the pipeline is kept in its own file, named after the function 
 
         $ pip install -r scripts/requirements.txt
 
-### 4.2 - Use
-
-<!-- TODO: describe the use and the options of the main scripts (evolve_goth.py, …) -->
-
-The Word documents of the editors are not distributed in this repository. The scripts are published to document how the XML was produced and for reuse in comparable projects.
-
 
 5 - Customisations to EVT 3
 --------------------
@@ -179,17 +173,17 @@ EVT 3 and Junicode (SIL Open Font License) are distributed by their developers u
 
 Each release of this repository is archived on Zenodo with its own DOI. Please cite the specific release you have used. GitHub's *Cite this repository* button, generated from `CITATION.cff`, provides the reference in several formats.
 
-> Falluomini, Carla, Pierandrea Gottardi, et al. (2026). *The Gothic Bible: LegOst Digital Editions* (Version 1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Falluomini, Carla, and Pierandrea Gottardi (2026). *The Gothic Bible: LegOst Digital Editions* (Version 1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
-For the online edition, please cite [Archivum Gothicum](https://archivumgothicum.eu).
+For the online edition, please cite [Archivum Gothicum](https://archivumgothicum.eu):
+
+> Falluomini, Carla, and Pierandrea Gottardi (2026). *Archivum Gothicum: edizione delle fonti in lingua gotica*. Venice: Edizioni Ca' Foscari. https://doi.org/10.30687/979-12-5742-031-4
 
 
 8 - Acknowledgements
 --------------------
 
-<!-- TODO: grant number, CUP and host institution(s) -->
-
-This work is part of the project *The Textual Legacy of the Ostrogoths in Italy: The Gothic Bible and Other Texts* (LegOst), funded by the Italian Ministry of University and Research (MUR) under the PRIN 2022 programme.
+EVT edition of the Gothic Bible, PRIN project 2022 “The Textual Legacy of the Ostrogoths in Italy: The Bible Version and Other Texts”, funded by the European Union – NextGenerationEU, Mission 4, Component 1 – CUP J53D23013530006.
 
 We are grateful to the institutions that hold the manuscripts for permission to consult and reproduce them. We also thank the developers of [EVT](http://evt.labcd.unipi.it/) and of [Junicode](https://github.com/psb1558/Junicode-font), on whose work the editions depend.
 
@@ -197,4 +191,4 @@ We are grateful to the institutions that hold the manuscripts for permission to 
 9 - Feedback
 --------------------
 
-Comments, corrections and suggestions are very much appreciated. Please use the [issue tracker](../../issues), or write to <!-- TODO: project contact address -->.
+Comments, corrections and suggestions are very much appreciated. Please use the [issue tracker](../../issues), or write to pgottardi.biblia@gmail.com.
